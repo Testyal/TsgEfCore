@@ -1,0 +1,20 @@
+﻿@model GenreList
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    
+    <table>
+        @foreach (var genre in Model.Genres)
+        {
+            <tr>
+                <td>@genre.Id</td>
+                <td>@genre.Type</td>
+            </tr>
+        }
+    </table>
+</div>
